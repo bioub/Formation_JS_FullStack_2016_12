@@ -17,7 +17,9 @@ const entierAlea = Math.floor(Math.random() * 101);
 const essais = [];
 
 const jouer = function() {
-    console.log('Vous avez déjà joué : ' + essais.join(', '));
+    if (essais.length) {
+        console.log('Vous avez déjà joué : ' + essais.join(', '));
+    }
     rl.question('Saisir un entier entre 0 et 100 : ', (answer) => {
 
         const entierSaisi = Number(answer);

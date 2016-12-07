@@ -53,7 +53,6 @@ class Jeu {
     }
 }
 
-
 const jeu = new Jeu({
     max: 10
 });

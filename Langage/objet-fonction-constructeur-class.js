@@ -17,7 +17,7 @@ console.log(romain.hello());
 const jean = new Contact('Jean');
 console.log(jean.hello());
 
-console.log(romain.hello === jean.hello);
+console.log(romain.hello === jean.hello); // true
 
 console.log(romain.hasOwnProperty('prenom')); // true
 console.log(romain.hasOwnProperty('hello')); // false
