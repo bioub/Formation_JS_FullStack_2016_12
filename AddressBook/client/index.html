@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app.module">
 <head>
     <meta charset="UTF-8">
     <title>AddressBook</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.7/css/bootstrap.css">
+
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -31,11 +32,11 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
+<div class="container" ng-controller="ContactListCtrl as ctcList">
     <h2>Liste des contacts</h2>
     <table class="table">
-        <tr>
-            <td>Jean Dupont</td>
+        <tr ng-repeat="contact in ctcList.contacts">
+            <td>{{contact.prenom}} {{contact.nom}}</td>
             <td>
                 <a href="#" class="btn btn-primary btn-xs">Afficher</a>
             </td>
@@ -45,6 +46,8 @@
 
 <script src="jspm_packages/npm/jquery@3.1.1/dist/jquery.js"></script>
 <script src="jspm_packages/github/twbs/bootstrap@3.3.7/js/bootstrap.js"></script>
-
+<script src="jspm_packages/github/angular/bower-angular@1.6.0/angular.js"></script>
+<script src="app/contact-list/contact-list.controller.js"></script>
+<script src="app/app.module.js"></script>
 </body>
 </html>

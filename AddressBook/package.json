@@ -1,9 +1,15 @@
 {
   "name": "address-book",
   "version": "0.0.1",
+  "scripts": {
+    "start": "node server",
+    "start-dev": "nodemon server"
+  },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "mongoose": "^4.7.1"
+    "mongoose": "^4.7.1",
+    "morgan": "^1.7.0"
   },
   "devDependencies": {
     "jspm": "^0.16.48"
@@ -13,6 +19,7 @@
       "baseURL": "client"
     },
     "dependencies": {
+      "angular": "github:angular/bower-angular@^1.6.0",
       "bootstrap": "github:twbs/bootstrap@^3.3.7",
       "moment": "npm:moment@^2.17.1"
     },
