@@ -1,0 +1,1 @@
+angular.module("contact-add.controller",["ui.router"]).controller("ContactAddCtrl",["$http","$state",function(a,b){this.ajouter=function(){a.post("/api/contacts",this.contact).then(function(a){b.go("contact-list")}).catch(function(a){console.error(a)})}}]);

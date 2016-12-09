@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/angular/angular.js"></script>
+</head>
+<body ng-app>
+    <form>
+        <label>
+            <input type="checkbox" ng-model="plusInfos"> Remplir plus d'infos
+        </label>
+        <div ng-show="plusInfos">
+            Infos complémentaires...
+        </div>
+    </form>
+</body>
+</html>

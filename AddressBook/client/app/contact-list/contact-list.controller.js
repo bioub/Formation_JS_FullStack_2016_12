@@ -6,4 +6,7 @@ angular.module('contact-list.controller', [])
             .then(function(res) {
                 this.contacts = res.data;
             }.bind(this))
+            .catch(function(err) {
+                console.log(err);
+            });
     }]);

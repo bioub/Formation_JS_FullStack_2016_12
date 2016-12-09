@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-strict-di>
 <head>
     <meta charset="UTF-8">
     <title>Angular</title>
@@ -11,8 +11,9 @@
         <button ng-click="ajouter()">+</button>
 
     </div>
-    <p ng-repeat="prenom in prenoms">
+    <p ng-repeat="prenom in prenoms track by $index">
         Bonjour <span ng-bind="prenom"></span>
+        <button ng-click="supprimer($index)">-</button>
     </p>
     <script>
         angular.module('app', [])
@@ -22,6 +23,10 @@
                 $scope.ajouter = function() {
                     $scope.prenoms.push($scope.prenom);
                     $scope.prenom = '';
+                };
+
+                $scope.supprimer = function(i) {
+                    $scope.prenoms.splice(i, 1);
                 };
             }]);
     </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/angular/angular.js"></script>
+</head>
+<body ng-app>
+    <table>
+        <tr>
+            <th>
+                <input type="checkbox" ng-model="toggle">
+            </th>
+            <th>Todos</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" ng-checked="toggle">
+            </td>
+            <td>Acheter du pain</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" ng-checked="toggle">
+            </td>
+            <td>Utiliser Grunt</td>
+        </tr>
+    </table>
+</body>
+</html>
